@@ -26,7 +26,7 @@ public class DemoController {
     }
 
     @PostMapping("/create")
-    public DemoEntity createDemo(@RequestBody @Valid CreateDemoDto createDemoDto) {
+    public DemoEntity createDemo(CreateDemoDto createDemoDto) {
         log.info("createDemoDto: {}", createDemoDto);
         return this.demoService.createDemo(createDemoDto);
     }
